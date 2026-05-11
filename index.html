@@ -177,26 +177,31 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 20px;
       width: 100%;
-      max-width: 420px;
+      max-width: 580px;
       box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(26,140,255,0.1);
+      overflow: hidden;
     }
     .mockup-header {
       display: flex; align-items: center; gap: 8px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
+      padding: 10px 14px;
       border-bottom: 1px solid rgba(255,255,255,0.07);
+      background: var(--surface);
     }
-    .mockup-dots { display: flex; gap: 5px; }
+    .mockup-dots { display: flex; gap: 5px; flex-shrink: 0; }
     .dot { width: 8px; height: 8px; border-radius: 50%; }
     .dot-r { background: #FF5F57; }
     .dot-y { background: #FFBD2E; }
     .dot-g { background: #28CA41; }
-    .mockup-title {
+    .mockup-urlbar {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 4px 10px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px; color: rgba(255,255,255,0.35);
-      margin-left: auto;
+      text-align: center;
     }
     .mockup-ad {
       border-radius: 8px;
@@ -762,9 +767,9 @@
               <div class="dot dot-y"></div>
               <div class="dot dot-g"></div>
             </div>
-            <span class="mockup-title">autovitrini.com.br — editor</span>
+            <div class="mockup-urlbar">autovitrini.com.br — editor</div>
           </div>
-          <div class="mockup-ad" style="padding:0; border:none; background:none; aspect-ratio: 4/5; border-radius: 8px; overflow: hidden; position: relative;"><img src="primeirasessao.gif" alt="Anúncio gerado pela Autovitrini — Omoda E5" style="width:100%; height:100%; object-fit:contain; object-position:center center; background:var(--surface); display:block;" /><div style="position:absolute; bottom:0; left:0; right:0; background: linear-gradient(transparent, rgba(6,10,15,0.6)); height:40%; pointer-events:none;"></div></div>
+          <img src="primeirasessao.gif" alt="Anúncio gerado pela Autovitrini" style="width:100%; max-height:420px; object-fit:contain; object-position:center top; background:var(--surface); display:block;" />
           <div class="mockup-timer">
             Gerado em <span class="timer-badge">60s</span>
           </div>
