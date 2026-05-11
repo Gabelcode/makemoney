@@ -714,12 +714,42 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
+      .nav-badge { display: none; }
       .container { padding: 0 24px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+
+      #hero { padding-top: 90px; padding-bottom: 60px; min-height: auto; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; align-items: start; }
+      .hero-sub { max-width: 100%; }
+
+      #problema, #como, #layouts, #prova, #planos { padding: 80px 0; }
+      #cta-final { padding: 100px 0; }
+      .cta-mid { padding: 60px 0; }
+
       .problems-grid, .steps-grid, .testimonials-grid, .early-grid, .pricing-grid { grid-template-columns: 1fr; }
       .layouts-grid { grid-template-columns: repeat(2,1fr); }
+
+      footer { padding: 48px 24px 40px; }
       .footer-top { flex-direction: column; gap: 20px; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      nav { padding: 14px 16px; }
+      .container { padding: 0 16px; }
+
+      #hero { padding-top: 80px; padding-bottom: 48px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn-primary { justify-content: center; }
+
+      #problema, #como, #layouts, #prova, #planos { padding: 60px 0; }
+      #cta-final { padding: 80px 0; }
+      .cta-mid { padding: 48px 0; }
+      .section-sub { margin-bottom: 40px; }
+
+      .layouts-grid { grid-template-columns: 1fr; }
+      .plan-card { padding: 28px 20px; }
+
+      footer { padding: 40px 16px 32px; }
     }
   </style>
 </head>
