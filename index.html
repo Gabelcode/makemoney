@@ -642,9 +642,12 @@
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 40px 48px;
-      display: flex; align-items: center; justify-content: space-between;
+      padding: 48px 48px 40px;
       position: relative; z-index: 1;
+    }
+    .footer-top {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 28px;
     }
     .footer-brand {
       display: flex; align-items: center; gap: 10px;
@@ -655,9 +658,22 @@
       font-size: 16px; font-weight: 700;
       color: rgba(255,255,255,0.4);
     }
+    .footer-links {
+      display: flex; align-items: center; gap: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; color: rgba(255,255,255,0.4);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.75); }
+    .footer-sep { color: rgba(255,255,255,0.2); }
     .footer-copy {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px; color: rgba(255,255,255,0.25);
+      font-size: 11px; color: rgba(255,255,255,0.2);
+      text-align: center;
     }
 
     /* ── SCROLL ANIMATIONS ── */
@@ -698,7 +714,8 @@
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
       .problems-grid, .steps-grid, .testimonials-grid, .early-grid, .pricing-grid { grid-template-columns: 1fr; }
       .layouts-grid { grid-template-columns: repeat(2,1fr); }
-      footer { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-top { flex-direction: column; gap: 20px; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
@@ -1045,11 +1062,20 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">
-    <img src="anuncio-hero.jpeg" alt="Autovitrini" />
-    <span>AUTOVITRINI · 2026</span>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="anuncio-hero.jpeg" alt="Autovitrini" />
+      <span>AUTOVITRINI</span>
+    </div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <span class="footer-sep">·</span>
+      <a href="#">Termos de Uso</a>
+      <span class="footer-sep">·</span>
+      <a href="mailto:contato@autovitrini.com.br">contato@autovitrini.com.br</a>
+    </div>
   </div>
-  <span class="footer-copy">feito para o mercado automotivo brasileiro</span>
+  <p class="footer-copy">CNPJ em registro · Autovitrini © 2026</p>
 </footer>
 
 <script>
